@@ -1,5 +1,5 @@
-# ISOM352-Projects
-ISOM352 Projects regarding data cleaning, visualization, and manipulation by using MySQL and Python.
+# ISOM352-Projects-Portfolio
+Compilation of ISOM352 Projects regarding data cleaning, visualization, and manipulation by using MySQL and Python.
 
 # [Project 1: SQL Queries](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
 ## Overview

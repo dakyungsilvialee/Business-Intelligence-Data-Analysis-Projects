@@ -25,7 +25,9 @@
 * Implemented loops to differentiate mortgage payment rates and metabolic rates 
 
 
-# [Project 4: Midterm](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 4: Midterm](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q2.sql)
+(https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q4.py)
+(https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q5.py)
 * Identify RDBMS concepts and manipulate data with MySQL and Python
 * Suggest solutions to business problems from insights gained from manipulated data
 

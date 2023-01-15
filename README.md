@@ -25,7 +25,7 @@
 * Implemented loops to differentiate mortgage payment rates and metabolic rates 
 
 
-# [Project 4: Midterm Q2](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q2.sql) & [Midterm Q4](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q4.py) & [Midterm Q5](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q5.py)
+# [Project 4: Midterm Q2](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q2.sql) & [Q4](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q4.py) & [Q5](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q5.py)
 * Identify RDBMS concepts and manipulate data with MySQL and Python
 * Suggest solutions to business problems from insights gained from manipulated data
 
@@ -56,7 +56,7 @@
 * Utilize Python isolation forest to identif weeks when anomalies are first detected over the years using specfic columns from the group by function
 
 
-# [Project 10: Stock Price Prediction](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 10: Stock Price Prediction](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/stock%20price%20prediction.py)
 * Gather a year worth of data from coca cola, x, and y's stock data and 5 similar stocks by using _________.
 * Create two columns for closing price movement direction for the focal stock and the percentage change in opening price
 * Create final data frame from manipulating data above

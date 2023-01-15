@@ -36,7 +36,7 @@
 * Create final three lists that contains all of the sentiment scores for each movie and rank from most positive rating to most negative rating
 
 
-# [Project 6: Citibike Cutomer Segmentation](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 6: Citibike Cutomer Segmentation](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/citibike%20customer%20segmentation.py)
 * Query data by using Python pandas to get average trip duration and number of trips for customer segments such as gender, age, day of the week, gender and age, and gender and day of the weel 
 * Plot scatterplots for single variable sements (gender, age) from manipulated data by using Python seaborn 
 * Control buble size in order to represent insights such as average trip duration and number of trips for multi variable segments 

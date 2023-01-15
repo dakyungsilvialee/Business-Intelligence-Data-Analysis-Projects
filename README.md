@@ -10,7 +10,7 @@
 * Python
 
 
-# [Project 1: SQL Queries](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 1: SQL Queries](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/SQL%20Queries.sql)
 * 10 SQL queries to gain specific insights from sakila database on mySQL 
 * 4 SQL queries to gain specific insights from online (stackexchange) database
 

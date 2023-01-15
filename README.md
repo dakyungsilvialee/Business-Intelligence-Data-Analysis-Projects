@@ -63,7 +63,7 @@
 * Predict movement of the focal stock by using percentage change in opening price of all 5 stocks by using the MLP model
 
 
-# [Project 10: Election Analysis](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/stock%20price%20prediction.py)
+# [Project 10: Election Analysis](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/election%20analytics.py)
 * Identify the socioeconomic factors that influence candidate selection 
 * Run a linear regression model and a kMean clustering model to identify variables that are statistically significant or similar
 

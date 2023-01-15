@@ -52,7 +52,7 @@
 * Run linear regression model and analyze significant coefficients and unexpected outcomes
 
 
-# [Project 9: Anomaly detection In Influenza like Illness data](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 9: Anomaly detection In Influenza like Illness data](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/anomaly%20detection%20in%20influenza-like%20illness%20data.py)
 * Utilize Python isolation forest to identif weeks when anomalies are first detected over the years using specfic columns from the group by function
 
 

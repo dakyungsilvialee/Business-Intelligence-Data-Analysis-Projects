@@ -30,7 +30,7 @@
 * Suggest solutions to business problems from insights gained from manipulated data
 
 
-# [Project 5: Webscraping & Sentiments](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 5: Webscraping & Sentiments](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Webscraping%20and%20Sentiments.py)
 * Webscraping of online reviews for movies by writing a Pythin function that takes the parameter url and returning a list of reviews
 * Write a Python loop function to get the sentiment score for each review in a list
 * Create final three lists that contains all of the sentiment scores for each movie and rank from most positive rating to most negative rating

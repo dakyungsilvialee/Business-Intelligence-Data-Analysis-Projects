@@ -25,9 +25,7 @@
 * Implemented loops to differentiate mortgage payment rates and metabolic rates 
 
 
-# [Project 4: Midterm Q2](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q2.sql)
-> # [Project 4: Midterm Q4](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q4.py)
-> # [Project 4: Midterm Q5](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q5.py)
+# [Project 4: Midterm Q2](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q2.sql) & # [Project 4: Midterm Q4](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q4.py) & # [Project 4: Midterm Q5](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Q5.py)
 * Identify RDBMS concepts and manipulate data with MySQL and Python
 * Suggest solutions to business problems from insights gained from manipulated data
 

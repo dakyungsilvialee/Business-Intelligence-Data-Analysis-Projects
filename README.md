@@ -20,7 +20,7 @@
 * Identified inventory management, product pricing, store management structure, and customer segmentation
 
 
-# [Project 3: Python Calculators](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 3: Python Calculators](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Python%20Calculators.py)
 * Develop Mortgage Payment Calculator & Basal Metabolic Rate (BMR) Calorie Calculator in Python 
 * Implemented loops to differentiate mortgage payment rates and metabolic rates 
 

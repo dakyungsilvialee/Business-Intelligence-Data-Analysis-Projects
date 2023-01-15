@@ -1,0 +1,204 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Loading Data and EDA
+
+# In[26]:
+
+
+import csv
+import pandas as pd
+import numpy as np
+import statistics
+import mysql.connector 
+from sqlalchemy import create_engine
+import plotly.express as px
+import seaborn as sns
+from datetime import datetime
+import statsmodels.formula.api as smf
+import statsmodels.api as sm
+from sklearn import datasets, linear_model
+from sklearn import metrics
+import matplotlib.pyplot as plt
+
+
+# In[15]:
+
+
+conn = mysql.connector.connect(
+    host="isom352.cqxikovybdnm.us-east-2.rds.amazonaws.com",
+    database="disney",
+    user="admin",
+    password="ISOM352db"
+)
+
+cursor = conn.cursor()
+
+
+# In[29]:
+
+
+total_gross = pd.read_csv("/Users/katiezhang/Downloads/ISOM 352/Python_Assignments/final_project/archive/disney_movies_total_gross_1.csv")
+revenue = pd.read_csv("/Users/katiezhang/Downloads/ISOM 352/Python_Assignments/final_project/archive/disney_revenue_1991-2016.csv")
+characters = pd.read_csv("/Users/katiezhang/Downloads/ISOM 352/Python_Assignments/final_project/archive/disney-characters.csv")
+directors = pd.read_csv("/Users/katiezhang/Downloads/ISOM 352/Python_Assignments/final_project/archive/disney-director1.csv")
+voice_actors = pd.read_csv("/Users/katiezhang/Downloads/ISOM 352/Python_Assignments/final_project/archive/disney-voice-actors1.csv")
+
+
+# # Visualizations
+
+# In[17]:
+
+
+# large movies table
+cursor = conn.cursor()
+cursor.execute('SELECT tg.genre, c.movie_title, tg.MPAA_rating, tg. inflation_adjusted_gross, tg. total_gross, c.hero, c.villain FROM characters1 AS c INNER JOIN totalgross1 tg ON c.movie_title = tg.movie_title ORDER BY tg.inflation_adjusted_gross DESC;')
+char = pd.DataFrame(cursor.fetchall())
+
+col_names = []
+for i in cursor.description:
+    col_names.append(i[0])
+char.columns = col_names
+char.head()
+
+
+# In[18]:
+
+
+fig = px.bar(char, x='hero', y='inflation_adjusted_gross', title="Inflation Adjusted Gross by Hero")
+fig.show()
+
+
+# In[19]:
+
+
+fig = px.bar(char, x='villain', y='inflation_adjusted_gross', title="Inflation Adjusted Gross by Villain")
+fig.show()
+
+
+# In[28]:
+
+
+#plotting inflation adjusted gross with hero, villain, movie title, director
+
+query = "SELECT DISTINCT d.director, d.movie_title, c.hero, tg.inflation_adjusted_gross FROM directors1 as d INNER JOIN totalgross1 tg ON d.movie_title = tg.movie_title INNER JOIN characters1 c ON c.movie_title = d.movie_title INNER JOIN voiceactors1 v ON v.movie_title = d.movie_title ORDER BY tg.inflation_adjusted_gross DESC"
+
+cursor.execute(query)
+df = pd.DataFrame(cursor.fetchall())
+df.columns=['director','movie','main char','in_adj_gross']
+df
+
+px.bar(df, x = "movie", y = "in_adj_gross", title = "Inflated Adjusted Gross by Movie")
+
+
+# In[20]:
+
+
+#plotting total revenues by year, broken down by Disney studios (minus disney interactive bc it's not working as it's a diff data type)
+query = "SELECT `Year`, `Studio Entertainment[NI 1]`, `Disney Consumer Products[NI 2]`, CAST(`Disney Interactive[NI 3][Rev 1]` AS decimal), `Walt Disney Parks and Resorts`, `Disney Media Networks`, `Total` FROM revenues1;"
+
+cursor.execute(query)
+df = pd.DataFrame(cursor.fetchall())
+df.columns=['Year','Studio Entertainment','Disney Consumer Products','Disney Interactive','Parks and Resorts','Disney Media Networks','Total']
+df
+
+px.line(df, x = "Year", y = ["Studio Entertainment", "Disney Consumer Products", 
+                             "Parks and Resorts","Disney Media Networks", "Total"],
+       title = "Revenues by Year")
+
+
+# In[22]:
+
+
+#plotting pie chart of movies' age ratings
+query = "SELECT MPAA_rating, COUNT(MPAA_rating) FROM totalgross1 GROUP BY MPAA_rating;"
+
+cursor.execute(query)
+df = pd.DataFrame(cursor.fetchall())
+df.columns=['Rating','Count']
+df_drop1 = df.drop(1, axis = "index")
+df = df_drop1.drop(2, axis = "index")
+df
+
+px.pie(df, values = "Count", names = "Rating", title = "Number of Movies by Rating")
+
+
+# In[23]:
+
+
+#plotting bar chart of inflation adjusted gross grouped by genre
+query = "SELECT DISTINCT tg.genre, AVG(tg.inflation_adjusted_gross) FROM totalgross1 as tg GROUP BY tg.genre ORDER BY AVG(tg.inflation_adjusted_gross) DESC;"
+
+cursor.execute(query)
+df = pd.DataFrame(cursor.fetchall())
+df.columns=['Genre','Avg Inflated Gross']
+df
+
+px.bar(df, x = "Genre", y = "Avg Inflated Gross", title = "Inflated Adjusted Gross by Genre")
+
+
+# In[27]:
+
+
+#word cloud of movie titles
+
+from wordcloud import WordCloud
+from wordcloud import STOPWORDS
+
+query = "SELECT DISTINCT d.director, d.movie_title, c.hero, tg.inflation_adjusted_gross FROM directors1 as d INNER JOIN totalgross1 tg ON d.movie_title = tg.movie_title INNER JOIN characters1 c ON c.movie_title = d.movie_title INNER JOIN voiceactors1 v ON v.movie_title = d.movie_title"
+
+cursor.execute(query)
+df = pd.DataFrame(cursor.fetchall())
+df.columns=['director','movie','main char','in_adj_gross']
+df
+
+stopwords = set(STOPWORDS)
+wordcloud = WordCloud(background_color = 'white').generate(str(df["movie"]))
+plt.rcParams['figure.figsize'] = (12,12)
+plt.axis("off")
+plt.imshow(wordcloud)
+plt.title("Disney Movies")
+plt.show()
+
+
+# In[31]:
+
+
+total_gross['release_date'] = pd.to_datetime(total_gross['release_date']).dt.date
+import datetime
+def fix_date(x):
+    try:
+        if x.year > 2017:
+            year = x.year - 100
+        else:
+            year = x.year
+        return datetime.date(year,x.month,x.day)
+    except:
+        print("Invalid datatype entered.")
+
+total_gross['release_date'] = total_gross['release_date'].apply(fix_date)
+total_gross['release_date'] = pd.to_datetime(total_gross['release_date'], errors='coerce')
+total_gross['year'] = pd.DatetimeIndex(total_gross['release_date']).year
+total_gross
+
+
+# In[9]:
+
+
+#plotting inflation adjusted gross by year
+scatterplot = px.scatter(total_gross.dropna(), x="year", y="inflation_adjusted_gross", hover_name="movietitle", 
+                         color = "genre", title = "Inflation Adjusted Gross by Year")
+scatterplot
+
+
+# # Linear Regression
+
+# In[12]:
+
+
+model3 = smf.ols('inflation_adjusted_gross ~ genre + hero + MPAA_rating + villain', data=char)
+results = model3.fit()
+print(results.summary())
+
+
+# In[ ]:

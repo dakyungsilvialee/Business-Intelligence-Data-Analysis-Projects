@@ -15,7 +15,7 @@
 * 4 SQL queries to gain specific insights from online (stackexchange) database
 
 
-# [Project 2: SQL & Excel for Business Intelligence](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 2: SQL & Excel for Business Intelligence](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/SQL%20and%20Excel%20for%20Business%20Intelligence.sql)
 * Manipulate data by using SQL queries and Excel functions to suggest solutions to a coffee shop business 
 * Identified inventory management, product pricing, store management structure, and customer segmentation
 

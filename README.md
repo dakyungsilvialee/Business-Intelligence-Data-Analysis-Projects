@@ -68,7 +68,7 @@
 * Run a linear regression model and a kMean clustering model to identify variables that are statistically significant or similar
 
 
-# [Project 12: Customer Reviews and Sentiment](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 12: Customer Reviews and Sentiment](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Customer%20Reviews%20and%20Sentiment.py)
 * Gather Starbucks, Khaldis, and Dunkin Donut's review data from Yelp API library and run a sentiment analysis for each business
 * Group Starbucks and competitors in order to create 2 different wordclouds that shows positive and negative reviews
 

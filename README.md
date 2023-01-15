@@ -46,7 +46,7 @@
 * Create visualizations such as bar chart, line chart, pie chart, choropleth, and scatter plot by using Python plotly 
 
 
-# [Project 8: Linear Regression for NBA Players](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 8: Linear Regression for NBA Players](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/linear%20regression%20for%20NBA%20players.py)
 * Explore data and develop a hypothesis on what player-game attributes are most likely to cause higher average points/games-played (PTS/GP)
 * Check for correlation between independent variables and create heatmap of the matrix by using Python plotly
 * Run linear regression model and analyze significant coefficients and unexpected outcomes

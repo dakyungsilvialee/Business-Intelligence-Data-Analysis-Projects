@@ -63,12 +63,17 @@
 * Predict movement of the focal stock by using percentage change in opening price of all 5 stocks by using the MLP model
 
 
-# [Project 11: Customer Reviews and Sentiment](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 10: Election Analysis](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/stock%20price%20prediction.py)
+* Identify the socioeconomic factors that influence candidate selection 
+* Run a linear regression model and a kMean clustering model to identify variables that are statistically significant or similar
+
+
+# [Project 12: Customer Reviews and Sentiment](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
 * Gather Starbucks, Khaldis, and Dunkin Donut's review data from Yelp API library and run a sentiment analysis for each business
 * Group Starbucks and competitors in order to create 2 different wordclouds that shows positive and negative reviews
 
 
-# [Project 12: Analysis of Disney Movies](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 13: Analysis of Disney Movies](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
 * Integrated MySQL through Python and debugged string errors with RegEx operators and analyzing the schema’s relationship through joins and group by functions
 * Visualized relationships between 5 datasets though matplotlib and seaborn to guide Disney film’s future marketing strategies
 * Advise marketing strategies for upcoming Disney movies by running a linear regression model that resulted a 99% accuracy and create a film review word cloud through NLP (Natural Language Processing) model

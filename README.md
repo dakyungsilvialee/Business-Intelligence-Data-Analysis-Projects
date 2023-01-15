@@ -73,7 +73,7 @@
 * Group Starbucks and competitors in order to create 2 different wordclouds that shows positive and negative reviews
 
 
-# [Project 13: Analysis of Disney Movies](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 13: Analysis of Disney Movies](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/Analysis%20of%20Disney%20Movies)
 * Integrated MySQL through Python and debugged string errors with RegEx operators and analyzing the schema’s relationship through joins and group by functions
 * Visualized relationships between 5 datasets though matplotlib and seaborn to guide Disney film’s future marketing strategies
 * Advise marketing strategies for upcoming Disney movies by running a linear regression model that resulted a 99% accuracy and create a film review word cloud through NLP (Natural Language Processing) model

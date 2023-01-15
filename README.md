@@ -42,7 +42,7 @@
 * Control buble size in order to represent insights such as average trip duration and number of trips for multi variable segments 
 
 
-# [Project 7: Gapminder Visualization](https://github.com/dakyungsilvialee/Analysis-of-Disney-Movies)
+# [Project 7: Gapminder Visualization](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/gapminder%20visualization.py)
 * Create visualizations such as bar chart, line chart, pie chart, choropleth, and scatter plot by using Python plotly 
 
 

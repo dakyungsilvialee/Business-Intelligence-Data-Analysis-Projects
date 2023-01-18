@@ -1,6 +1,8 @@
 # ISOM352-Projects-Portfolio
 ## Introduction
 > Compilation of ISOM352 Projects regarding data cleaning, visualization, and manipulation by using MySQL and Python.
+> After analysis, forecasted results through supervised and unsupervised learning methods.
+
 
 
 ## Technologies Used
@@ -37,9 +39,9 @@
 
 
 # [Project 6: Citibike Cutomer Segmentation](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/citibike%20customer%20segmentation.py)
-* Query data by using Python pandas to get average trip duration and number of trips for customer segments such as gender, age, day of the week, gender and age, and gender and day of the weel 
-* Plot scatterplots for single variable sements (gender, age) from manipulated data by using Python seaborn 
-* Control buble size in order to represent insights such as average trip duration and number of trips for multi variable segments 
+* Query data by using Python pandas to get average trip duration and number of trips for customer segments such as gender, age, day of the week, gender and age, and gender and day of the week 
+* Plot scatterplots for single variable segments (gender, age) from manipulated data by using Python seaborn 
+* Control bubble size in order to represent insights such as average trip duration and number of trips for multi variable segments 
 
 
 # [Project 7: Gapminder Visualization](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/gapminder%20visualization.py)

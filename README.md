@@ -59,7 +59,7 @@
 
 
 # [Project 10: Stock Price Prediction](https://github.com/dakyungsilvialee/ISOM352-Projects-Portfolio/blob/master/stock%20price%20prediction.py)
-* Gather a year worth of data from coca cola, x, and y's stock data and 5 similar stocks by using _________.
+* Gather a year worth of data from coca cola stocks and pepsi's stock data and 5 similar stocks by using yahoo finance scraping
 * Create two columns for closing price movement direction for the focal stock and the percentage change in opening price
 * Create final data frame from manipulating data above
 * Predict movement of the focal stock by using percentage change in opening price of all 5 stocks by using the MLP model
